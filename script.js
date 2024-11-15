@@ -1,23 +1,28 @@
-//your JS code here. If required.
-const bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'Norma Jean', 'The Bled', 'Say Anything', 'The Midway State', 'We Came as Romans', 'Counterparts', 'Oh, Sleeper', 'A Skylit Drive', 'Anywhere But Here', 'An Old Dog'];
-const ignoreWords = ["a", "an", "the"];
+let list = document.getElementById("band")
 
-function sortArticles(arr) {
-    return arr.sort((a, b) => {
-        const titleA = a.toLowerCase().replace(/^(a |an |the )/i, "");
-        const titleB = b.toLowerCase().replace(/^(a |an |the )/i, "");
-        return titleA.localeCompare(titleB);
-    });
-}
+const bands = [
+    'Anywhere But Here',
+    'The Bled',
+    'Counterparts',
+    'The Devil Wears Prada',
+    'The Midway State',
+    'Norma Jean',
+    'Oh, Sleeper',
+    'An Old Dog',
+    'Pierce the Veil',
+    'The Plot in You',
+    'Say Anything',
+    'A Skylit Drive',
+    'We Came as Romans'
+  ]
+  
 
-function displaySortedArticles() {
-    const sortedArticles = sortArticles(bands);
-    const list = document.getElementById("band");
 
-    sortedArticles.forEach(bands => {
-        const listItem = document.createElement("li");
-        listItem.textContent = article;
-        list.appendChild(listItem);
-    });
-}
-displaySortedArticles();
+  for(let item of bands)
+  {
+    let listItm = document.createElement("li")
+    listItm.innerText = item
+	      list.setAttribute("id", "bands")
+
+    list.appendChild(listItm)
+  }
